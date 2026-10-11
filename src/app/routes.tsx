@@ -6,6 +6,10 @@ import PromptDetail from "./pages/PromptDetail";
 import Remix from "./pages/Remix";
 import Collections from "./pages/Collections";
 import Profile from "./pages/Profile";
+import LoginPage from "../features/auth/pages/LoginPage";
+import SignupPage from "../features/auth/pages/SignupPage";
+import CreatePromptPage from "../features/prompts/pages/CreatePromptPage";
+import EditProfile from "./pages/EditProfile";
 
 export const router = createBrowserRouter([
   {
@@ -28,5 +32,21 @@ export const router = createBrowserRouter([
   {
     path: "/remix/:id",
     Component: Remix,
-  }
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+  },
+  {
+    path: "/create",
+    element: <CreatePromptPage />,
+  },
+  {
+    path: "/settings/profile",
+    element: <EditProfile />,
+  },
 ]);
